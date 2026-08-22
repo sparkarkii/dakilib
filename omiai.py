@@ -3,8 +3,6 @@ from bs4 import BeautifulSoup
 import datetime
 from collections import namedtuple
 from jinja2 import Template
-import sys
-# sys.path.append('./my_utilities')
 from my_utilities import emailfunc
 
 
