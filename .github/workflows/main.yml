@@ -27,5 +27,4 @@ jobs:
           pip install requests bs4 jinja2
       - name: execute script
         run: |
-          # export PYTHONPATH=$PYTHONPATH:./my_utilities
           python omiai.py
