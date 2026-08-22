@@ -3,7 +3,9 @@ from bs4 import BeautifulSoup
 import datetime
 from collections import namedtuple
 from jinja2 import Template
-import email_func
+import sys
+sys.path.append('./my_utilities')
+from my_utilities import emailfunc
 
 
 
@@ -86,7 +88,7 @@ def notify_new_dakis(past_days=0) -> None:
     </body></html>
     """)
     content = template.render(dakis=dakis)
-    email_func.send_email(subject=subject, content=content, subtype='html')
+    emailfunc.send_email(subject=subject, content=content, subtype='html')
 
     
 
