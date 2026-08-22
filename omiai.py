@@ -4,7 +4,7 @@ import datetime
 from collections import namedtuple
 from jinja2 import Template
 import sys
-sys.path.append('./my_utilities')
+# sys.path.append('./my_utilities')
 from my_utilities import emailfunc
 
 
