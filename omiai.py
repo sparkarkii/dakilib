@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 import datetime
 from collections import namedtuple
 from jinja2 import Template
-import sys
-from pathlib import Path
-sys.path.append(str(Path.home()/'py_script'/'email_func'))
 import email_func
 
 
@@ -69,7 +66,7 @@ def get_recent_dakis(past_days=0) -> list[Article]:
 
 def notify_new_dakis(past_days=0) -> None:
     """
-    Execute get_recent_dakis function and notify the user via sending email to them.
+    Run get_recent_dakis and notify the user via sending email to them.
     """
 
     today = datetime.date.today()
