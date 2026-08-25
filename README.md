@@ -1,2 +1,2 @@
 # dakilib
-A library for some dakimakura stuff.
+A repo for some dakimakura stuff.
