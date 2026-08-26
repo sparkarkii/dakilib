@@ -28,12 +28,13 @@ def get_recent_dakis(starting_from: datetime.date) -> list[Daki]:
     while True:
         html = requests.get(URL+str(page_number), verify=False).content.decode()
         articles = BeautifulSoup(html, 'html5lib').find_all('article')
-        page = [Daki(
-            title = str(article.find('h2', class_='post-title').a.string),
-            date = datetime.datetime.strptime(article.find('p', class_='post-date').string, r'%Y年%m月%d日').date(),
-            thumbnail = article.find('div', class_='post-thumbnail').img.get('src'), 
-            link = article.find('h2', class_='post-title').a.get('href'),
-        ) for article in articles]
+        page = []
+        for article in articles:
+            title = str(article.find('h2', class_='post-title').a.string)
+            date = datetime.datetime.strptime(article.find('p', class_='post-date').string, r'%Y年%m月%d日').date()
+            thumbnail = article.find('div', class_='post-thumbnail').img.get('src')
+            link = article.find('h2', class_='post-title').a.get('href')
+            page.append(Daki(title, date, thumbnail, link))
 
         for daki in page: 
             if daki.date < starting_from:
