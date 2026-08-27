@@ -3,7 +3,7 @@ name: omiai workflow
 on:
   schedule:
     - cron: "30 23 * * *"    #runs everyday
-      timezone: "Asia/Taiwan"
+      timezone: Asia/Hong_Kong
   workflow_dispatch:
 
 jobs:
