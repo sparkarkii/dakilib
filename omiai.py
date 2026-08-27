@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 from collections import namedtuple
 from jinja2 import Template
-from my_utilities import emailfunc
+from utils import emailfunc
 
 
 
