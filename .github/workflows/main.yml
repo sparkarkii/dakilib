@@ -1,4 +1,4 @@
-name: omiai_workflow
+name: omiai workflow
 
 on:
   schedule:
@@ -16,8 +16,8 @@ jobs:
       - name: checkout utils repo
         uses: actions/checkout@v6.0.2
         with:
-          repository: sparkarkii/my_utilities
-          path: my_utilities
+          repository: sparkarkii/utils
+          path: utils
       - name: setup python
         uses: actions/setup-python@v6.2.0
         with:
