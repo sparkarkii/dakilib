@@ -2,8 +2,7 @@ name: omiai workflow
 
 on:
   schedule:
-    - cron: "30 23 * * *"    #runs everyday
-      timezone: Asia/Hong_Kong
+    - cron: "00 16 * * *"    #runs everyday
   workflow_dispatch:
 
 jobs:
