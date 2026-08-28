@@ -68,4 +68,5 @@ def notify_new_dakis(starting_from: datetime.date) -> None:
 
 
 if __name__ == '__main__':
-    notify_new_dakis(starting_from=datetime.date.today())
+    yesterday = datetime.date.today() - datetime.timedelta(days=1)
+    notify_new_dakis(starting_from=yesterday)
