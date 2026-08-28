@@ -59,7 +59,8 @@ def notify_new_dakis(starting_from: datetime.date) -> None:
         {% endfor %}
     </body></html>
     """)
-    subject = f'New dakimakuras released on {today}' if starting_from == today else f'New dakimakuras released from {starting_from} to {today}'
+    # subject = f'New dakimakuras released on {today}' if starting_from == today else f'New dakimakuras released from {starting_from} to {today}'
+    subject = datetime.datetime.now()
     content = template.render(dakis=dakis) if dakis else 'No items found.'
     emailfunc.send_email(subject=subject, content=content, subtype='html')
 
