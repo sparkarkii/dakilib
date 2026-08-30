@@ -28,6 +28,6 @@ jobs:
       - name: execute script
         env:
             EMAIL: ${{ secrets.EMAIL }}
-            PW: ${{ secrets.PW }}
+            EMAIL_PW: ${{ secrets.EMAIL_PW }}
         run: |
           python omiai.py
